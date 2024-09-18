@@ -101,6 +101,13 @@
       -webkit-transition: opacity .2s ease-in-out;
     }
 
+    .news-scroll-box {
+  height: 300px;
+  overflow: auto;
+  background-color: #f7f5f5;
+  padding: 2px 10px 10px 10px;
+}
+
     span.highlight {
       background-color: #CA7FD4;
     }
@@ -140,127 +147,222 @@
 
 
 
-        <!-- News -->
-<!--        <hr>-->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:10px;width:100%;vertical-align:middle">
-              <heading>News</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="padding:10px;width:100%;border:0px;border-spacing:3px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-            <td>
-              <p style="color:black; display:inline">&#x2022; </p>
-            </td>
-            <td>
-               06/21: &nbsp &nbsp   Defended my PhD! 🎉 👩‍🎓 </a>
-            </td>
-          </tr>
-        <!-- ITEM -->
 
+<!--News---------------------------------------------->
+  <table id="news" class="table" align="right" border="0" cellspacing="0" cellpadding="10">
+    <tr class="row">
+      <td class="cell">
+        <a id="news"><heading>News</heading></a>
+        <div class="news-scroll-box">
+          <ul>
+            <li>
+              <strong>[July 2024]</strong>
+              <a href="https://s-shamil.github.io/HandFormer/">HandFormer</a>
+              has been accepted to <a href="https://eccv2024.ecva.net/">ECCV 2024</a>.
+            </li>
+            <li>
+              <strong>[June 2024]</strong>
+              <a href=" https://assembly-101.github.io/">Assembly101</a>
+              was awarded the
+              <a href="https://egovis.github.io/awards/2022_2023/">2022/2023 Distinguished Paper Award</a>
+              at the
+              <a href="https://egovis.github.io/cvpr24/">EgoVis</a>
+              workshop.
+            </li>
+            <li>
+              <strong>[September 2023]</strong> "<a href="https://dibschat.github.io/openvocab-egoAR/">Opening the
+                Vocabulary of Egocentric Actions</a>" has been accepted to
+              <a href="https://nips.cc/">NeurIPS 2023</a>.
+            </li>
+            <li>
+              <strong>[October 2022]</strong> Organized
+              <a href="https://sites.google.com/view/egocentric-hand-body-activity">Human Body, Hands, and Activities
+                from Egocentric and
+                Multi-view Cameras</a>
+              (HBHA) workshop at ECCV 2022.
+            </li>
+            <li>
+              <strong>[March 2022]</strong> Paper proposing a new
+              procedural activity dataset
+              <a href="https://assembly-101.github.io/">Assembly101</a>
+              has been accepted to CVPR 2022.
+            </li>
+            <li>
+              06/21: &nbsp &nbsp   Defended my PhD! 🎉 👩‍🎓
+            </li>
 
-
-          </tbody>
-        </table>
-
-
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <a id="news"><heading>Publications</heading></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-<!-- ITEM -->
-          <tr>
-            <td style="padding:5px;width:40%;vertical-align:middle">
-              <div style="text-align: center">
-              <img src="images/xmic.png" alt="XMIC" width="220" height="150" class="center">
-              </div>
-            </td>
-            <td width="75%" valign="middle">
-                <br>
-                 <a href=""> <papertitle>X-MIC: Cross-Modal Instance Conditioning for Egocentric Action Generalization</papertitle></a>
-            <br>
-                <b>Anna Kukleva</b>, <a href="https://scholar.google.com/citations?user=-juoweoAAAAJ&hl">Fadime Sener</a>, <a href="https://scholar.google.com/citations?user=yz2P_aUAAAAJ&hl=en">Edoardo Remelli</a>, <a href="https://btekin.github.io/">Bugra Tekin</a>, <a href="https://scholar.google.com/citations?user=HDYUYvwAAAAJ&hl=en">Eric Sauser </a>, <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele">Bernt Schiele</a>, <a href="https://shugaoma.github.io/">Shugao Ma</a>
-            <br>
-            <em>CVPR, 2024</em>
-
-        <p> <a href="https://arxiv.org/pdf/2403.19811v1.pdf">Paper</a>  | <a href="https://github.com/Annusha/xmic">Code</a>
-            <br><br>
-            </td>
-          </tr>
-
-
-          <tr>
-            <td style="padding:5px;width:40%;vertical-align:middle">
-              <div style="text-align: center">
-              <img src="images/cvpr19.png" alt="cet" width="240" height="100" class="center">
-              </div>
-            </td>
-            <td width="75%" valign="middle">
-                <br>
-                 <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Kukleva_Unsupervised_Learning_of_Action_Classes_With_Continuous_Temporal_Embedding_CVPR_2019_paper.pdf"> <papertitle>Unsupervised Learning of Action Classes with Continuous Temporal Embedding</papertitle></a>
-            <br>
-             <b>Anna Kukleva*</b>, <a href="https://hildekuehne.github.io/">Hilde Kuehne*</a>,  <a href="https://scholar.google.com/citations?user=-juoweoAAAAJ&hl">Fadime Sener</a>, <a href="https://pages.iai.uni-bonn.de/gall_juergen/">Jürgen Gall</a>
-            <br>
-                (*equal contribution)
-            <br>
-            <em>CVPR, 2019 </em>
-
-        <p> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Kukleva_Unsupervised_Learning_of_Action_Classes_With_Continuous_Temporal_Embedding_CVPR_2019_paper.pdf">Paper</a> | <a href="https://github.com/Annusha/unsup_temp_embed">Code</a>
-            </td>
-          </tr>
-
-
-
-        </tbody></table>
-
-
-
-        <br>
-        <table width="100%" align="center" border="0" cellpadding="0">
-          <tr style="padding:0px">
-            <td width="100%" valign="middle">
-              <a id="news"><heading>Academic</heading></a>
-            </td>
-          </tr>
-          <tr>
-            <td width="75%" valign="center">
-              <p>
-              <ul>
-
-                <li>
-                    Top Reviewer:  CVPR20
-                </li>
-
-
-              </ul>
-              </p>
-            </td>
-          </tr>
-        </table>
-
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-                <br>
-                Stolen from <a href="https://jonbarron.info/">Jon Barron</a>. Big thanks!
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
+          </ul>
+        </div>
       </td>
     </tr>
   </table>
-</body>
 
+
+
+<!--Publication  Start ---------------------------------------------->
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+<tr>
+<td style="padding:20px;width:100%;vertical-align:left"> <br><br>
+<a id="news"><heading>Publications</heading></a>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+
+
+<!-- ITEM -->
+  <tr>
+    <td style="padding:5px;width:40%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/handformer.png" alt="handformer" width="250" height="120" class="center">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <a href="https://arxiv.org/pdf/2403.09805">
+        <papertitle>On the Utility of 3D Hand Poses for Action Recognition</papertitle>
+        </a> <br>
+        <a href="https://www.comp.nus.edu.sg/~salman/">Md Salman Shamil</a>,
+        <a href="https://dibschat.github.io/">Dibyadip Chatterjee</a>,
+        <b>Fadime Sener*</b>,
+        <a href="https://shugaoma.github.io/">Shugao Ma</a>,
+        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+      <em>ECCV, 2024</em>
+      <p>
+        <a href="https://arxiv.org/pdf/2403.09805">Paper</a>  |
+        <a href="https://github.com/s-shamil/HandFormer">Code</a> |
+        <a href="https://s-shamil.github.io/HandFormer/">Project</a> <br><br>
+    </td>
+    </tr>
+
+
+<!-- ITEM -->
+  <tr>
+  <td style="padding:5px;width:40%;vertical-align:middle">
+      <div style="text-align: center">
+      <img src="images/xmic.png" alt="XMIC" width="220" height="150" class="center">
+      </div>
+  </td>
+  <td width="75%" valign="middle"><br>
+      <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Kukleva_X-MIC_Cross-Modal_Instance_Conditioning_for_Egocentric_Action_Generalization_CVPR_2024_paper.pdf">
+      <papertitle>X-MIC: Cross-Modal Instance Conditioning for Egocentric Action Generalization</papertitle>
+      </a> <br>
+      <a href="https://annusha.github.io/">Anna Kukleva</a>,
+      <b>Fadime Sener*</b>,
+      <a href="https://scholar.google.com/citations?user=yz2P_aUAAAAJ&hl=en">Edoardo Remelli</a>,
+      <a href="https://btekin.github.io/">Bugra Tekin</a>,
+      <a href="https://scholar.google.com/citations?user=HDYUYvwAAAAJ&hl=en">Eric Sauser </a>,
+      <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele">Bernt Schiele</a>,
+      <a href="https://shugaoma.github.io/">Shugao Ma</a><br>
+    <em>CVPR, 2024</em>
+    <p>
+      <a href="https://arxiv.org/pdf/2403.19811v1.pdf">Paper</a>  |
+      <a href="https://github.com/Annusha/xmic">Code</a> <br><br>
+  </td>
+  </tr>
+
+
+<!-- ITEM -->
+  <tr>
+    <td style="padding:5px;width:40%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/openegoAR.png" alt="openegoAR" width="250" height="120" class="center">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <a href="https://arxiv.org/pdf/2308.11488">
+        <papertitle>Opening the Vocabulary of Egocentric Actions </papertitle>
+        </a> <br>
+        <a href="https://dibschat.github.io/">Dibyadip Chatterjee</a>,
+        <b>Fadime Sener*</b>,
+        <a href="https://shugaoma.github.io/">Shugao Ma</a>,
+        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+      <em>NeurIPS, 2023</em>
+      <p>
+        <a href="https://arxiv.org/pdf/2308.11488">Paper</a>  |
+        <a href="https://github.com/dibschat/openvocab-egoAR">Code</a> |
+        <a href="https://dibschat.github.io/openvocab-egoAR/">Project</a> <br><br>
+    </td>
+    </tr>
+
+
+<!-- ITEM -->
+  <tr>
+    <td style="padding:5px;width:40%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/assembly.png" alt="openegoAR" width="250" height="120" class="center">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <a href="https://arxiv.org/pdf/2308.11488">
+        <papertitle>Assembly101: A Large-Scale Multi-View Video Dataset for Understanding Procedural Activities </papertitle>
+        </a> <br>
+        <b>Fadime Sener*</b>,
+        <a href="https://dibschat.github.io/">Dibyadip Chatterjee</a>,
+        <a href="">Daniel Shelepov</a>,
+        <a href="">Kun He</a>,
+        <a href="">Dipika Singhania</a>,
+        <a href="">Robert Wang</a>,
+        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+      <em>CVPR, 2022</em><br>
+      <em> <a href="https://egovis.github.io/awards/2022_2023/"> EgoVis 2022/2023 Distinguished Paper Winner</em>
+      <p>
+        <a href="https://arxiv.org/pdf/2308.11488">Paper</a>  |
+        <a href="https://github.com/assembly-101?tab=repositories">Code</a> |
+        <a href="https://assembly-101.github.io/">Project</a> |
+        <a href="https://www.youtube.com/watch?v=8T8x-iWa3qw">Video</a> <br><br>
+    </td>
+    </tr>
+
+
+<!-- ITEM -->
+  <tr>
+  <td style="padding:5px;width:40%;vertical-align:middle">
+    <div style="text-align: center">
+    <img src="images/cvpr19.png" alt="cet" width="240" height="100" class="center">
+    </div>
+  </td>
+  <td width="75%" valign="middle"><br>
+    <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Kukleva_Unsupervised_Learning_of_Action_Classes_With_Continuous_Temporal_Embedding_CVPR_2019_paper.pdf">
+    <papertitle>Unsupervised Learning of Action Classes with Continuous Temporal Embedding</papertitle>
+    </a><br>
+        <a href="https://annusha.github.io/">Anna Kukleva</a>,
+        <a href="https://hildekuehne.github.io/">Hilde Kuehne</a>,
+        <b>Fadime Sener*</b>,
+        <a href="https://pages.iai.uni-bonn.de/gall_juergen/">Jürgen Gall</a> <br>
+      <em>CVPR, 2019</em>
+      <p>
+        <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Kukleva_Unsupervised_Learning_of_Action_Classes_With_Continuous_Temporal_Embedding_CVPR_2019_paper.pdf">Paper</a> |
+        <a href="https://github.com/Annusha/unsup_temp_embed">Code</a> <br><br>
+
+
+  </td>
+  </tr>
+
+</tbody>
+</table>
+<!--Publication  End ---------------------------------------------->
+
+
+<!--Ref Start ---------------------------------------------->
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr>
+  <td style="padding:0px"> <br>
+  <p style="text-align:right;font-size:small;"> <br>
+  Stolen from <a href="https://jonbarron.info/">Jon Barron</a>. Big thanks!
+  </p>
+  </td>
+  </tr>
+</tbody>
+</table>
+<!--Ref End ---------------------------------------------->
+
+
+</td>
+</tr>
+</table>
+</body>
 </html>
