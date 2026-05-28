@@ -8,108 +8,160 @@
 
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link rel="icon" type="image/png" href="images/Blue_Jays.png">
-  <title>Fadime Sener</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113195086-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-113195086-1');
-</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style type="text/css">
     /* Color scheme stolen from Sergey Karayev */
 
     a {
-      color: #2d59eb;
+      color: #8b2a2a;
       text-decoration: none;
     }
     b {
-      color: #000000;
-      text-decoration: none;
-    }
-    c {
-      color: #0BDA51;
-      text-decoration: none;
-    }
-    d {
-      color: #FFA500;
+      color: #111111;
       text-decoration: none;
     }
     a:focus,
     a:hover {
-      color: #af19bf;
-      text-decoration: none;
+      color: #5a1a1a;
+      text-decoration: underline;
     }
 
     body,
     td,
     th,
     tr,
-    p,
+    p {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 15px;
+      color: #222;
+    }
+
     a {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 16px
-      background-image: "images/jose/bg.png";
-       /*background-color: #fffff;*/
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 15px;
     }
 
     strong {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
     }
 
     heading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 24px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #111;
     }
 
     papertitle {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14.5px;
-      font-weight: 600
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #111;
+      line-height: 1.3;
     }
 
     name {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 34px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #111;
     }
 
-    .one {
-      width: 160px;
-      height: 160px;
-      position: relative;
+    em {
+      color: #6b6b6b;
+      font-style: italic;
     }
 
-    .two {
-      width: 160px;
-      height: 160px;
-      position: absolute;
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
+    .year-header {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      font-style: italic;
+      color: #111;
+      padding: 28px 0 8px 0;
     }
 
-    .fade {
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
+    .pub-row td {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+
+    .pub-row td:first-child {
+      padding-right: 24px;
+    }
+
+    .pub-row td:last-child {
+      padding-left: 24px;
+    }
+
+    .pub-row td a {
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .pub-row td a:hover {
+      text-decoration-thickness: 2px;
     }
 
     .news-scroll-box {
-  height: 300px;
-  overflow: auto;
-  background-color: #f7f5f5;
-  padding: 2px 10px 10px 10px;
-}
+      max-height: 380px;
+      overflow-y: auto;
+      padding: 4px 4px 4px 0;
+      margin-top: 6px;
+    }
+    .news-scroll-box ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .news-scroll-box li {
+      padding: 6px 0 6px 0;
+      line-height: 1.45;
+      display: flex;
+      gap: 12px;
+      border-top: 1px solid #f0f0f0;
+    }
+    .news-scroll-box li:first-child {
+      border-top: none;
+    }
+    .news-scroll-box .date {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-style: italic;
+      color: #8b2a2a;
+      font-weight: 500;
+      flex: 0 0 56px;
+      letter-spacing: 0.02em;
+    }
+    .news-scroll-box .news-body {
+      flex: 1;
+    }
+    .news-scroll-box::-webkit-scrollbar {
+      width: 6px;
+    }
+    .news-scroll-box::-webkit-scrollbar-thumb {
+      background: #ddd;
+      border-radius: 3px;
+    }
 
     span.highlight {
       background-color: #CA7FD4;
+    }
+
+    .thumb {
+      width: 200px;
+      height: 120px;
+      object-fit: contain;
+      background-color: #ffffff;
+      display: block;
+      margin: 0 auto;
     }
   </style>
 
@@ -127,18 +179,14 @@
                 <name>Fadime Sener</name>
               </p>
               <p style="text-align:justify">
-                I am a Research Scientist at Meta Superintelligence Labs.
-                Before this, I was a Reseach Scientist at Meta Reality Labs for three years and I spent around seven months at the National University of Singapore (NUS) and four years at the University of Bonn as a research assistant working with Angela Yao and Juergen Gall.
-                I received my PhD from the University of Bonn under the supervision of Prof. Angela Yao.
-                Before that, I completed my Master’s degree in Computer Science at Bilkent University and my Bachelor’s degree in Computer Science at Hacettepe University.
+                I am a Senior AI Research Scientist at Meta Superintelligence Labs. Previously, I was at Meta Reality Labs, the National University of Singapore (NUS), and the University of Bonn, where I received my PhD with Angela Yao and Juergen Gall. I hold MSc and BSc degrees in Computer Engineering from Bilkent and Hacettepe University.
               </p>
               <p style="text-align:justify">
-               My research focuses on computer vision and natural language processing. During my PhD, I worked on video understanding through vision and language. I have worked on online action recognition and leveraging multimodal large language models for streaming video understanding at Meta Reality Labs. Recently, I have been working on multimedia generation at Meta Superintelligence Labs.
-              </p>
+                My research focuses on computer vision and multimodal learning. During my PhD, I worked on unsupervised video understanding through vision and language. At Meta, I worked on online action recognition and streaming video understanding with multimodal LLMs, and on multimedia generation and autoregressive video generation. Recently, I've been exploring streaming video recognition with real-time edge models as tools in agentic pipelines, focused on accurate understanding and timely, proactive response.
               </p>
               <p style="text-align:center">
-                <a href="mailto:sener@cs.uni-bonn.de">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?hl=en&user=-juoweoAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> &nbsp/&nbsp
+                <a href="mailto:famesener@gmail.com">Email</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?hl=en&user=-juoweoAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> &nbsp;/&nbsp;
                 <a href="https://www.linkedin.com/in/fadime-sener-674064156/">LinkedIn</a>
               </p>
             </td>
@@ -152,123 +200,145 @@
 
 
 <!--News---------------------------------------------->
-<table id="news" class="table" align="right" border="0" cellspacing="0" cellpadding="10">
+<table class="table" align="right" border="0" cellspacing="0" cellpadding="10">
 <tr class="row">
 <td class="cell">
-<a id="news"><heading>News</heading></a>
+<span id="news"><heading>News</heading></span>
 <div class="news-scroll-box">
 <ul>
- 
+
 
 <!-- ITEM -->
 <li>
-  06/25: &nbsp;&nbsp;
-   <a href="https://dibschat.github.io/ProVideLLM/">ProVideLLM</a> ranked 2nd in the 
-  <a href="https://eval.ai/web/challenges/challenge-page/2273/overview">EgoExo4D Fine-grained Keystep Recognition Challenge</a> 
-  at CVPR 2025.
+  <span class="date">06/26</span>
+  <span class="news-body">Organizing the second
+  <a href="https://varworkshop.github.io/">Vision-based Assistants in the Real-World</a>
+  workshop at CVPR 2026.</span>
+</li>
+
+<!-- ITEM -->
+<li>
+  <span class="date">07/25</span>
+  <span class="news-body">Started working at Meta Superintelligence Labs as Senior AI Research Scientist.</span>
+</li>
+
+<!-- ITEM -->
+<li>
+  <span class="date">06/25</span>
+  <span class="news-body"><a href="https://dibschat.github.io/ProVideLLM/">ProVideLLM</a> ranked 2nd in <a href="https://eval.ai/web/challenges/challenge-page/2273/overview">EgoExo4D Fine-grained Keystep Recognition Challenge at CVPR 2025</a>.</span>
 </li>
 
 
 <!-- ITEM -->
 <li>
-  06/25: &nbsp &nbspOrganized
+  <span class="date">06/25</span>
+  <span class="news-body">Organized
   <a href="https://varworkshop.github.io/">
     Vision-based Assistants in the Real-World  </a>
-    workshop at CVPR 2025.
+    workshop at CVPR 2025.</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  06/25: &nbsp &nbsp
-  <a href="https://assemblyhands.github.io/">AssemblyHands</a>
+  <span class="date">06/25</span>
+  <span class="news-body"><a href="https://assemblyhands.github.io/">AssemblyHands</a>
   was awarded the
   <a href="https://egovis.github.io/awards/2023_2024//">2023/2024 Distinguished Paper Award</a>
   at the
   <a href="https://egovis.github.io/cvpr25/">EgoVis</a>
-  workshop.
+  workshop.</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  06/24: &nbsp &nbsp
-  <a href="https://assembly-101.github.io/">Assembly101</a>
+  <span class="date">06/24</span>
+  <span class="news-body"><a href="https://assembly-101.github.io/">Assembly101</a>
   was awarded the
   <a href="https://egovis.github.io/awards/2022_2023/">2022/2023 Distinguished Paper Award</a>
   at the
   <a href="https://egovis.github.io/cvpr24/">EgoVis</a>
-  workshop.
+  workshop.</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  10/22: &nbsp &nbspOrganized
+  <span class="date">10/22</span>
+  <span class="news-body">Organized
   <a href="https://nus-cvml.github.io/atlas-eccv22/">
     ATLAS: AcTion Localization And Segmentation in Video  </a>
-    tutorial at ECCV 2022.
+    tutorial at ECCV 2022.</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  10/22: &nbsp &nbspOrganized
+  <span class="date">10/22</span>
+  <span class="news-body">Organized
   <a href="https://sites.google.com/view/egocentric-hand-body-activity">
     Human Body, Hands, and Activities from Egocentric and  Multi-view Cameras</a>
-    (HBHA) workshop at ECCV 2022.
+    (HBHA) workshop at ECCV 2022.</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  03/22: &nbsp &nbsp   Released
+  <span class="date">03/22</span>
+  <span class="news-body">Released
   <a href="https://assembly-101.github.io/">Assembly101</a>
-   at CVPR 2022.
+   at CVPR 2022.</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  07/21: &nbsp &nbsp   Defended my PhD! 🎉 👩‍🎓
+  <span class="date">07/21</span>
+  <span class="news-body">Defended my PhD! 🎉 👩‍🎓</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  06/21: &nbsp &nbsp   Outstanding reviewer at CVPR 2021
+  <span class="date">06/21</span>
+  <span class="news-body">Outstanding reviewer at CVPR 2021</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  10/20: &nbsp &nbsp   Started working at Meta Reality Labs as Research Scientist
+  <span class="date">10/20</span>
+  <span class="news-body">Started working at Meta Reality Labs as an AI Research Scientist</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  06/20: &nbsp &nbsp   Ranked first in the action anticipation and second in the action
-  recognition categories of the EPIC-KITCHENS Dataset - 2020 Challenge with
-  <a href="hhttps://arxiv.org/pdf/2006.00830">
-    Temporal aggregate representations for long term video understanding</a>
+  <span class="date">06/20</span>
+  <span class="news-body">1st in action anticipation and 2nd in action recognition at EPIC-KITCHENS 2020 Challenge with
+  <a href="https://arxiv.org/pdf/2006.00830">Temporal aggregate representations for long-range video understanding</a>.</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  01/20: &nbsp &nbsp   Started working as Research Assistant at the
+  <span class="date">01/20</span>
+  <span class="news-body">Started working as Research Assistant at the
   <a href="https://www.comp.nus.edu.sg/">
-    National University of Singapore: NUS</a>
+    National University of Singapore: NUS</a></span>
 </li>
 
 <!-- ITEM -->
 <li>
-  07/16: &nbsp &nbsp   Attended International Computer Vision Summer School (ICVSS) 2016
+  <span class="date">07/16</span>
+  <span class="news-body">Attended International Computer Vision Summer School (ICVSS) 2016</span>
 </li>
 
 <!-- ITEM -->
 <li>
-  10/15: &nbsp &nbsp   Started working as Research Assistant at the
+  <span class="date">10/15</span>
+  <span class="news-body">Started working as Research Assistant at the
   <a href="https://www.uni-bonn.de/en/studying/degree-programs/degree-programs-a-z/computer-science-msc/">
-    University of Bonn</a>
+    University of Bonn</a></span>
 </li>
 
 <!-- ITEM -->
 <li>
-  06/13: &nbsp &nbsp   Best poster award at  INRIA CVML Summer School 2013 with
+  <span class="date">06/13</span>
+  <span class="news-body">Best poster award at  INRIA CVML Summer School 2013 with
   <a href="https://web.cs.hacettepe.edu.tr/~nazli/publications/cm_ap_workshop.pdf">
-    On recognizing actions in still images via multiple features</a>
+    On recognizing actions in still images via multiple features</a></span>
 </li>
 
 </ul>
@@ -283,564 +353,623 @@
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 <tbody>
 <tr>
-<td style="padding:20px;width:100%;vertical-align:left"> <br><br>
-<a id="news"><heading>Publications</heading></a>
+<td style="padding:20px;width:100%;text-align:center"> <br><br>
+<span id="publications"><heading>Publications</heading></span>
 </td>
 </tr>
 </tbody>
 </table>
+
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 <tbody>
 
+<tr><td colspan="2" class="year-header">2026</td></tr>
 
-
-
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/ProVideoLLM.jpg" alt="openegoAR" width="250" height="70" class="center">
+        <img src="images/decouple_icml.jpg" alt="Decouple and Cache" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2504.13915">
-        <papertitle>Memory-efficient Streaming VideoLLMs for Real-time Procedural Video Understanding </papertitle>
-        </a> <br>
-        <a href="https://dibschat.github.io/">Dibyadip Chatterjee</a>,
-        <a href="https://scholar.google.com/citations?user=yz2P_aUAAAAJ&hl=en">Edoardo Remelli</a>,
-        <a href="https://people.csail.mit.edu/yalesong/home/">Yale Song</a>,
-        <a href="https://btekin.github.io/">Bugra Tekin</a>,
-        <a href="https://scholar.google.com/citations?user=BwE_L4MAAAAJ&hl=en">Abhay Mittal</a>,
-        <a href="https://scholar.google.co.in/citations?user=M_NWm1wAAAAJ&hl=en">Bharat Lal Bhatnagar</a>,
-        <a href="https://www.cihancamgoz.com/">Necati Cihan Camgoz</a>,
-        <a href="https://shreyashampali.github.io/">Shreyas Hampali</a>,
-        <a href="https://scholar.google.com/citations?user=HDYUYvwAAAAJ&hl=en">Eric Sauser</a>,
-        <a href="https://scholar.google.com/citations?user=SUd2LJUAAAAJ&hl=en">Shugao Ma</a>, 
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
-        <b>Fadime Sener*</b>   
-      <em> Arxiv, 2025</em> 
+        <papertitle>Decouple and Cache: KV Cache Construction for Streaming Video Understanding</papertitle> <br>
+        <span class="authors">Zhanzhong Pang,
+        Dibyadip Chatterjee,
+        <b>Fadime Sener</b>,
+        Angela Yao</span> <br>
+      <em>ICML, 2026</em>
       <p>
-        <a href="https://arxiv.org/pdf/2504.13915">Paper</a>  |
-        <a href="https://dibschat.github.io/ProVideLLM/">Project</a> <br><br>
+        <a href="https://arxiv.org/pdf/2605.01858">Paper</a> · <a href="https://github.com/pangzhan27/DSCache">Code</a>
     </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/CMeRT.jpg" alt="openegoAR" width="250" height="50" class="center">
+        <img src="images/disc_gen_iclr.jpg" alt="On Discriminative vs. Generative Classifiers" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2503.18359?">
-        <papertitle>Context-Enhanced Memory-Refined Transformer for Online Action Detection </papertitle>
-        </a> <br>
-        <a href="https://pangzhan27.github.io/">Zhanzhong Pang</a>,
-        <b>Fadime Sener*</b>, 
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
-      <em> CVPR, 2025</em>
+        <papertitle>On Discriminative vs. Generative Classifiers: Rethinking MLLMs for Action Understanding</papertitle> <br>
+        <span class="authors">Zhanzhong Pang,
+        Dibyadip Chatterjee,
+        <b>Fadime Sener</b>,
+        Angela Yao</span> <br>
+      <em>ICLR, 2026</em>
       <p>
-        <a href="https://arxiv.org/pdf/2503.18359?">Paper</a>  <br><br> 
+        <a href="https://arxiv.org/pdf/2603.02546">Paper</a> · <a href="https://github.com/pangzhan27/GAD">Code</a>
     </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/mistake.jpg" alt="openegoAR" width="250" height="120" class="center">
+        <img src="images/dont_pause.jpg" alt="Don't Pause! Every prediction matters in a streaming video" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://openreview.net/pdf?id=SNzpTSuuVJ">
-        <papertitle>Spatial and temporal beliefs for mistake detection in assembly tasks </papertitle>
-        </a> <br>
-        <a href="https://guodongding.cn/">Guodong Ding</a>,
-        <b>Fadime Sener*</b>,
-        <a href="https://shugaoma.github.io/">Shugao Ma</a>,
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
-      <em> CVIU, 2025</em>
+        <papertitle>Don't Pause! Every prediction matters in a streaming video</papertitle> <br>
+        <span class="authors">Dibyadip Chatterjee,
+        Zhanzhong Pang,
+        <b>Fadime Sener</b>,
+        Yale Song,
+        Angela Yao</span> <br>
+      <em>Under review, NeurIPS 2026</em>
       <p>
-        <a href="https://openreview.net/pdf?id=SNzpTSuuVJ">Paper</a>  <br><br>
+        <a href="https://arxiv.org/pdf/2604.24317">Paper</a> · <a href="https://dibschat.github.io/SPOT-Bench/">Project</a>
     </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/tailTAS.jpg" alt="longtailTAS" width="250" height="120" class="center">
+        <img src="images/osmo_cvpr.jpg" alt="OSMO" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2408.09919">
-        <papertitle>Long-Tail Temporal Action Segmentation with Group-wise Temporal Logit Adjustment</papertitle>
-        </a> <br>
-        <a href="https://pangzhan27.github.io/">Zhanzhong Pang</a>,
-        <b>Fadime Sener*</b>,
-        <a href="https://stablegradients.github.io/">Shrinivas Ramasubramanian</a>,
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+        <papertitle>OSMO: Open-vocabulary Self-eMOtion Tracking</papertitle>
+        <br>
+      <em>CVPR, 2026</em>
+    </td>
+</tr>
+
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/trust_clip.jpg" alt="TrustCLIP" class="thumb">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <papertitle>TrustCLIP: Learning Private Visual Features via Adversarial Reconstruction</papertitle>
+        <br>
+      <em>Under review, ECCV 2026</em>
+    </td>
+</tr>
+
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/sneakpeak.jpg" alt="SneakPeek" class="thumb">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <papertitle>SneakPeek: Future-Guided Instructional Streaming Video Generation</papertitle> <br>
+        <span class="authors">Cheeun Hong,
+        German Barquero,
+        <b>Fadime Sener</b>,
+        Markos Georgopoulos,
+        Edgar Schönfeld,
+        Stefan Popov,
+        Yuming Du,
+        Oscar Mañas,
+        Albert Pumarola</span> <br>
+      <em>Under review, ECCV 2026</em>
+      <p>
+        <a href="https://arxiv.org/pdf/2512.13019">Paper</a>
+    </td>
+</tr>
+
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/palm_3dv.jpg" alt="PALM" class="thumb">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <papertitle>PALM: A Dataset and Baseline for Learning Multi-subject Hand Prior</papertitle> <br>
+        <span class="authors">Zicong Fan,
+        Edoardo Remelli,
+        David Dimond,
+        <b>Fadime Sener</b>,
+        Liuhao Ge,
+        Bugra Tekin,
+        Cem Keskin,
+        Shreyas Hampali</span> <br>
+      <em>3DV, 2026</em>
+      <p>
+        <a href="https://arxiv.org/pdf/2511.05403">Paper</a> · <a href="https://github.com/facebookresearch/PALM">Code</a>
+    </td>
+</tr>
+
+<tr><td colspan="2" class="year-header">2025</td></tr>
+
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/ProVideoLLM.jpg" alt="Memory-efficient Streaming VideoLLMs for Real-time Procedural Video Understanding" class="thumb">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <papertitle>Memory-efficient Streaming VideoLLMs for Real-time Procedural Video Understanding</papertitle> <br>
+        <span class="authors">Dibyadip Chatterjee,
+        Edoardo Remelli,
+        Yale Song,
+        Bugra Tekin,
+        Abhay Mittal,
+        Bharat Lal Bhatnagar,
+        Necati Cihan Camgoz,
+        Shreyas Hampali,
+        Eric Sauser,
+        Shugao Ma,
+        Angela Yao,
+        <b>Fadime Sener</b></span> <br>
+      <em>ICCV, 2025</em><br>
+      <em>2nd, EgoExo4D Fine-grained Keystep Recognition Challenge, CVPR 2025</em>
+      <p>
+        <a href="https://arxiv.org/pdf/2504.13915">Paper</a> · <a href="https://dibschat.github.io/ProVideLLM/">Project</a> · intern project
+    </td>
+</tr>
+
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/CMeRT.jpg" alt="Context-Enhanced Memory-Refined Transformer for Online Action Detection" class="thumb">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <papertitle>Context-Enhanced Memory-Refined Transformer for Online Action Detection</papertitle> <br>
+        <span class="authors">Zhanzhong Pang,
+        <b>Fadime Sener</b>, 
+        Angela Yao</span> <br>
+      <em>CVPR, 2025</em>
+      <p>
+        <a href="https://arxiv.org/pdf/2503.18359">Paper</a> · <a href="https://github.com/pangzhan27/CMeRT">Code</a>
+    </td>
+</tr>
+
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/mistake.jpg" alt="Spatial and temporal beliefs for mistake detection in assembly tasks" class="thumb">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <papertitle>Spatial and temporal beliefs for mistake detection in assembly tasks</papertitle> <br>
+        <span class="authors">Guodong Ding,
+        <b>Fadime Sener</b>,
+        Shugao Ma,
+        Angela Yao</span> <br>
+      <em>CVIU, 2025</em>
+      <p>
+        <a href="https://www.sciencedirect.com/science/article/pii/S107731422500061X">Paper</a>
+    </td>
+</tr>
+
+<tr><td colspan="2" class="year-header">2024</td></tr>
+
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/tailTAS.jpg" alt="Long-Tail Temporal Action Segmentation with Group-wise Temporal Logit Adjustment" class="thumb">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <papertitle>Long-Tail Temporal Action Segmentation with Group-wise Temporal Logit Adjustment</papertitle> <br>
+        <span class="authors">Zhanzhong Pang,
+        <b>Fadime Sener</b>,
+        Shrinivas Ramasubramanian,
+        Angela Yao</span> <br>
       <em>ECCV, 2024</em>
       <p>
-        <a href="https://arxiv.org/pdf/2408.09919">Paper</a>  |
-        <a href="https://github.com/pangzhan27/GTLA">Code</a>   <br><br>
+        <a href="https://arxiv.org/pdf/2408.09919">Paper</a> · <a href="https://github.com/pangzhan27/GTLA">Code</a>
     </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/handformer.png" alt="handformer" width="250" height="120" class="center">
+        <img src="images/cost_sensitive.jpg" alt="Cost-Sensitive Learning for Long-Tailed Temporal Action Segmentation" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2403.09805">
-        <papertitle>On the Utility of 3D Hand Poses for Action Recognition</papertitle>
-        </a> <br>
-        <a href="https://www.comp.nus.edu.sg/~salman/">Md Salman Shamil</a>,
-        <a href="https://dibschat.github.io/">Dibyadip Chatterjee</a>,
-        <b>Fadime Sener*</b>,
-        <a href="https://shugaoma.github.io/">Shugao Ma</a>,
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+        <papertitle>Cost-Sensitive Learning for Long-Tailed Temporal Action Segmentation</papertitle> <br>
+        <span class="authors">Zhanzhong Pang,
+        <b>Fadime Sener</b>,
+        Shrinivas Ramasubramanian,
+        Angela Yao</span> <br>
+      <em>BMVC, 2024</em>
+      <p>
+        <a href="https://arxiv.org/pdf/2503.18358">Paper</a> · <a href="https://github.com/pangzhan27/CSL_LT-TAS">Code</a>
+    </td>
+</tr>
+
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
+        <div style="text-align: center">
+        <img src="images/handformer.png" alt="On the Utility of 3D Hand Poses for Action Recognition" class="thumb">
+        </div>
+    </td>
+    <td width="75%" valign="middle"><br>
+        <papertitle>On the Utility of 3D Hand Poses for Action Recognition</papertitle> <br>
+        <span class="authors">Md Salman Shamil,
+        Dibyadip Chatterjee,
+        <b>Fadime Sener</b>,
+        Shugao Ma,
+        Angela Yao</span> <br>
       <em>ECCV, 2024</em>
       <p>
-        <a href="https://arxiv.org/pdf/2403.09805">Paper</a>  |
-        <a href="https://github.com/s-shamil/HandFormer">Code</a> |
-        <a href="https://s-shamil.github.io/HandFormer/">Project</a> <br><br>
+        <a href="https://arxiv.org/pdf/2403.09805">Paper</a> · <a href="https://github.com/s-shamil/HandFormer">Code</a> · <a href="https://s-shamil.github.io/HandFormer/">Project</a>
     </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/diffh2o.jpg" alt="DiffH2O" width="220" height="150" class="center">
+        <img src="images/diffh2o.jpg" alt="DiffH2O" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2403.17827">
-        <papertitle>DiffH2O: Diffusion-Based Synthesis of Hand-Object Interactions from Textual Descriptions</papertitle>
-        </a> <br>
-        <a href="https://ait.ethz.ch/people/sammyc">Sammy Christen</a>,
-        <a href="https://shreyashampali.github.io/">Shreyas Hampali</a>,
-        <b>Fadime Sener*</b>,
-        <a href="https://scholar.google.com/citations?user=yz2P_aUAAAAJ&hl=en">Edoardo Remelli</a>,
-        <a href="https://cmp.felk.cvut.cz/~hodanto2/">Tomas Hodan</a>,
-        <a href="https://scholar.google.com/citations?user=HDYUYvwAAAAJ&hl=en">Eric Sauser </a>,
-        <a href="https://shugaoma.github.io/">Shugao Ma</a><br>
-        <a href="https://btekin.github.io/">Bugra Tekin</a>,
+        <papertitle>DiffH2O: Diffusion-Based Synthesis of Hand-Object Interactions from Textual Descriptions</papertitle> <br>
+        <span class="authors">Sammy Christen,
+        Shreyas Hampali,
+        <b>Fadime Sener</b>,
+        Edoardo Remelli,
+        Tomas Hodan,
+        Eric Sauser,
+        Shugao Ma,
+        Bugra Tekin</span> <br>
       <em>SIGGRAPH Asia, 2024</em>
       <p>
-        <a href="https://arxiv.org/pdf/2403.17827">Paper</a>  |
-        <a href="https://diffh2o.github.io/">Project</a> <br><br>
+        <a href="https://arxiv.org/pdf/2403.17827">Paper</a> · <a href="https://diffh2o.github.io/">Project</a>
     </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-  <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+  <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
-      <img src="images/xmic.png" alt="XMIC" width="220" height="150" class="center">
+      <img src="images/xmic.png" alt="X-MIC" class="thumb">
       </div>
   </td>
   <td width="75%" valign="middle"><br>
-      <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Kukleva_X-MIC_Cross-Modal_Instance_Conditioning_for_Egocentric_Action_Generalization_CVPR_2024_paper.pdf">
-      <papertitle>X-MIC: Cross-Modal Instance Conditioning for Egocentric Action Generalization</papertitle>
-      </a> <br>
-      <a href="https://annusha.github.io/">Anna Kukleva</a>,
-      <b>Fadime Sener*</b>,
-      <a href="https://scholar.google.com/citations?user=yz2P_aUAAAAJ&hl=en">Edoardo Remelli</a>,
-      <a href="https://btekin.github.io/">Bugra Tekin</a>,
-      <a href="https://scholar.google.com/citations?user=HDYUYvwAAAAJ&hl=en">Eric Sauser </a>,
-      <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele">Bernt Schiele</a>,
-      <a href="https://shugaoma.github.io/">Shugao Ma</a><br>
+      <papertitle>X-MIC: Cross-Modal Instance Conditioning for Egocentric Action Generalization</papertitle> <br>
+      <span class="authors">Anna Kukleva,
+      <b>Fadime Sener</b>,
+      Edoardo Remelli,
+      Bugra Tekin,
+      Eric Sauser,
+      Bernt Schiele,
+      Shugao Ma</span> <br>
     <em>CVPR, 2024</em>
     <p>
-      <a href="https://arxiv.org/pdf/2403.19811v1.pdf">Paper</a>  |
-      <a href="https://github.com/Annusha/xmic">Code</a> <br><br>
-  </td>
+      <a href="https://arxiv.org/pdf/2403.19811v1.pdf">Paper</a> · <a href="https://github.com/Annusha/xmic">Code</a> · intern project
+    </td>
 </tr>
 
+<tr><td colspan="2" class="year-header">2023</td></tr>
 
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/openegoAR.png" alt="openegoAR" width="250" height="120" class="center">
+        <img src="images/openegoAR.png" alt="Opening the Vocabulary of Egocentric Actions" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2308.11488">
-        <papertitle>Opening the Vocabulary of Egocentric Actions </papertitle>
-        </a> <br>
-        <a href="https://dibschat.github.io/">Dibyadip Chatterjee</a>,
-        <b>Fadime Sener*</b>,
-        <a href="https://shugaoma.github.io/">Shugao Ma</a>,
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+        <papertitle>Opening the Vocabulary of Egocentric Actions</papertitle> <br>
+        <span class="authors">Dibyadip Chatterjee,
+        <b>Fadime Sener</b>,
+        Shugao Ma,
+        Angela Yao</span> <br>
       <em>NeurIPS, 2023</em>
       <p>
-        <a href="https://arxiv.org/pdf/2308.11488">Paper</a>  |
-        <a href="https://github.com/dibschat/openvocab-egoAR">Code</a> |
-        <a href="https://dibschat.github.io/openvocab-egoAR/">Project</a> <br><br>
+        <a href="https://arxiv.org/pdf/2308.11488">Paper</a> · <a href="https://github.com/dibschat/openvocab-egoAR">Code</a> · <a href="https://dibschat.github.io/openvocab-egoAR/">Project</a>
     </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/taskTAS.png" alt="openegoAR" width="250" height="120" class="center">
+        <img src="images/taskTAS.png" alt="Temporal Action Segmentation" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2210.10352">
-        <papertitle>Temporal Action Segmentation: An Analysis of Modern Techniques </papertitle>
-        </a> <br>
-        <a href="https://guodongding.cn/">Guodong Ding</a>,
-        <b>Fadime Sener*</b>,
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+        <papertitle>Temporal Action Segmentation: An Analysis of Modern Techniques</papertitle> <br>
+        <span class="authors">Guodong Ding,
+        <b>Fadime Sener</b>,
+        Angela Yao</span> <br>
       <em>TPAMI, 2023</em>
       <p>
-        <a href="https://arxiv.org/pdf/2210.10352">Paper</a>  |
-        <a href="https://github.com/nus-cvml/awesome-temporal-action-segmentation">Project</a> <br><br>
+        <a href="https://arxiv.org/pdf/2210.10352">Paper</a> · <a href="https://github.com/nus-cvml/awesome-temporal-action-segmentation">Survey</a>
     </td>
 </tr>
 
-
-
-
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/assemblyhands.png" alt="openegoAR" width="210" height="160" class="center">
+        <img src="images/assemblyhands.png" alt="AssemblyHands" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Ohkawa_AssemblyHands_Towards_Egocentric_Activity_Understanding_via_3D_Hand_Pose_Estimation_CVPR_2023_paper.pdf">
-        <papertitle>AssemblyHands: Towards Egocentric Activity Understanding via 3D Hand Pose Estimation </papertitle>
-        </a> <br>
-        <a href="https://tkhkaeio.github.io/">Takehiko Ohkawa</a>,
-        <a href="https://scholar.google.com/citations?user=eLFhiSYAAAAJ&hl=en">Kun He</a>,
-        <b>Fadime Sener*</b>,
-        <a href="https://cmp.felk.cvut.cz/~hodanto2/">Tomas Hodan</a>,
-        <a href="https://scholar.google.co.jp/citations?user=YV0TVrQAAAAJ&hl">Luan Tran</a>,
-        <a href="https://scholar.google.com/citations?user=9HoiYnYAAAAJ&hl=en">Cem Keskin</a> <br>
-      <em>CVPR, 2023</em>
+        <papertitle>AssemblyHands: Towards Egocentric Activity Understanding via 3D Hand Pose Estimation</papertitle> <br>
+        <span class="authors">Takehiko Ohkawa,
+        Kun He,
+        <b>Fadime Sener</b>,
+        Tomas Hodan,
+        Luan Tran,
+        Cem Keskin</span> <br>
+      <em>CVPR, 2023</em><br>
+      <em><a href="https://egovis.github.io/awards/2023_2024/">EgoVis 2023/2024 Distinguished Paper Winner</a></em>
       <p>
-        <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Ohkawa_AssemblyHands_Towards_Egocentric_Activity_Understanding_via_3D_Hand_Pose_Estimation_CVPR_2023_paper.pdf">Paper</a>  |
-        <a href="https://github.com/facebookresearch/assemblyhands-toolkit">Code</a> |
-        <a href="https://assemblyhands.github.io/">Project</a> <br><br>
+        <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Ohkawa_AssemblyHands_Towards_Egocentric_Activity_Understanding_via_3D_Hand_Pose_Estimation_CVPR_2023_paper.pdf">Paper</a> · <a href="https://github.com/facebookresearch/assemblyhands-toolkit">Code</a> · <a href="https://assemblyhands.github.io/">Project</a>
     </td>
 </tr>
 
+<tr><td colspan="2" class="year-header">2022</td></tr>
 
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/zeroshotTpami.jpg" alt="openegoAR" width="250" height="120" class="center">
+        <img src="images/zeroshotTpami.jpg" alt="Transferring Knowledge from Text to Video" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2106.03158">
-        <papertitle>Transferring Knowledge from Text to Video: Zero-Shot Anticipation for Procedural Actions </papertitle>
-        </a> <br>
-        <b>Fadime Sener*</b>,
-        <a href="https://scholar.google.co.in/citations?user=HRHD7_EAAAAJ&hl=en"> Rishabh Saraf</a>,
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+        <papertitle>Transferring Knowledge from Text to Video: Zero-Shot Anticipation for Procedural Actions</papertitle> <br>
+        <span class="authors"><b>Fadime Sener</b>,
+        Rishabh Saraf,
+        Angela Yao</span> <br>
       <em>TPAMI, 2022</em>
       <p>
         <a href="https://arxiv.org/pdf/2106.03158">Paper</a>
     </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/troi.jpg" alt="openegoAR" width="250" height="120" class="center">
+        <img src="images/troi.jpg" alt="Transformed ROIs for Capturing Visual Transformations in Videos" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2106.03162">
-        <papertitle>Transformed ROIs for Capturing Visual Transformations in Videos </papertitle>
-        </a> <br>
-        <a href="https://abhinavrai44.github.io/"> Abhinav Rai</a>,
-        <b>Fadime Sener*</b>,
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+        <papertitle>Transformed ROIs for Capturing Visual Transformations in Videos</papertitle> <br>
+        <span class="authors">Abhinav Rai,
+        <b>Fadime Sener</b>,
+        Angela Yao</span> <br>
       <em>CVIU, 2022</em>
       <p>
         <a href="https://arxiv.org/pdf/2106.03162">Paper</a>
     </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/assembly.png" alt="openegoAR" width="250" height="120" class="center">
+        <img src="images/assembly.png" alt="Assembly101" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Sener_Assembly101_A_Large-Scale_Multi-View_Video_Dataset_for_Understanding_Procedural_Activities_CVPR_2022_paper.pdf">
-        <papertitle>Assembly101: A Large-Scale Multi-View Video Dataset for Understanding Procedural Activities </papertitle>
-        </a> <br>
-        <b>Fadime Sener*</b>,
-        <a href="https://dibschat.github.io/">Dibyadip Chatterjee</a>,
-        <a href="">Daniel Shelepov</a>,
-        <a href="">Kun He</a>,
-        <a href="">Dipika Singhania</a>,
-        <a href="">Robert Wang</a>,
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+        <papertitle>Assembly101: A Large-Scale Multi-View Video Dataset for Understanding Procedural Activities</papertitle> <br>
+        <span class="authors"><b>Fadime Sener</b>,
+        Dibyadip Chatterjee,
+        Daniel Shelepov,
+        Kun He,
+        Dipika Singhania,
+        Robert Wang,
+        Angela Yao</span> <br>
       <em>CVPR, 2022</em><br>
-      <em> <a href="https://egovis.github.io/awards/2022_2023/"> EgoVis 2022/2023 Distinguished Paper Winner</em>
+      <em><a href="https://egovis.github.io/awards/2022_2023/">EgoVis 2022/2023 Distinguished Paper Winner</a></em>
       <p>
-        <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Sener_Assembly101_A_Large-Scale_Multi-View_Video_Dataset_for_Understanding_Procedural_Activities_CVPR_2022_paper.pdf">Paper</a>  |
-        <a href="https://github.com/assembly-101?tab=repositories">Code</a> |
-        <a href="https://assembly-101.github.io/">Project</a> |
-        <a href="https://www.youtube.com/watch?v=8T8x-iWa3qw">Video</a> <br><br>
+        <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Sener_Assembly101_A_Large-Scale_Multi-View_Video_Dataset_for_Understanding_Procedural_Activities_CVPR_2022_paper.pdf">Paper</a> · <a href="https://github.com/assembly-101?tab=repositories">Code</a> · <a href="https://assembly-101.github.io/">Project</a> · <a href="https://www.youtube.com/watch?v=8T8x-iWa3qw">Video</a>
     </td>
 </tr>
 
+<tr><td colspan="2" class="year-header">2021</td></tr>
 
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/tempagg_tech.jpg" alt="openegoAR" width="250" height="120" class="center">
+        <img src="images/tempagg_tech.jpg" alt="Temporal aggregate representations technical report" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2106.03152">
-        <papertitle>Technical report: Temporal aggregate representations</papertitle>
-        </a> <br>
-        <b>Fadime Sener*</b>,
-        <a href="https://dibschat.github.io/">Dibyadip Chatterjee</a>,
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+        <papertitle>Technical report: Temporal aggregate representations</papertitle> <br>
+        <span class="authors"><b>Fadime Sener</b>,
+        Dibyadip Chatterjee,
+        Angela Yao</span> <br>
       <em>Arxiv, EPIC-KITCHENS-Challenges, 2021</em>
       <p>
-        <a href="https://arxiv.org/pdf/2106.03152">Paper</a>  |
-        <a href="https://github.com/dibschat/tempAgg">Code</a>
+        <a href="https://arxiv.org/pdf/2106.03152">Paper</a> · <a href="https://github.com/dibschat/tempAgg">Code</a>
     </td>
 </tr>
 
+<tr><td colspan="2" class="year-header">2020</td></tr>
 
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
-        <img src="images/tempagg.jpg" alt="openegoAR" width="250" height="120" class="center">
+        <img src="images/tempagg.jpg" alt="Temporal aggregate representations for long-range video understanding" class="thumb">
         </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/2006.00830">
-        <papertitle>Temporal aggregate representations for long-range video understanding</papertitle>
-        </a> <br>
-        <b>Fadime Sener*</b>,
-        <a href="">Dipika Singhania</a>,
-        <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
-      <em>ECCV, 2020</em>
+        <papertitle>Temporal aggregate representations for long-range video understanding</papertitle> <br>
+        <span class="authors"><b>Fadime Sener</b>,
+        Dipika Singhania,
+        Angela Yao</span> <br>
+      <em>ECCV, 2020</em><br>
+      <em>1st in action anticipation, 2nd in action recognition, EPIC-KITCHENS 2020 Challenge</em>
       <p>
-        <a href="https://arxiv.org/pdf/2006.00830">Paper</a>  |
-        <a href="https://github.com/dibschat/tempAgg">Code</a>
+        <a href="https://arxiv.org/pdf/2006.00830">Paper</a> · <a href="https://github.com/dibschat/tempAgg">Code</a>
     </td>
 </tr>
 
+<tr><td colspan="2" class="year-header">2019</td></tr>
 
-<!-- ITEM -->
-<tr>
-    <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+    <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
-      <img src="images/cvpr19.png" alt="cet" width="240" height="100" class="center">
+      <img src="images/cvpr19.png" alt="Unsupervised Learning of Action Classes with Continuous Temporal Embedding" class="thumb">
       </div>
     </td>
     <td width="75%" valign="middle"><br>
-      <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Kukleva_Unsupervised_Learning_of_Action_Classes_With_Continuous_Temporal_Embedding_CVPR_2019_paper.pdf">
-      <papertitle>Unsupervised Learning of Action Classes with Continuous Temporal Embedding</papertitle>
-      </a><br>
-          <a href="https://annusha.github.io/">Anna Kukleva</a>,
-          <a href="https://hildekuehne.github.io/">Hilde Kuehne</a>,
-          <b>Fadime Sener*</b>,
-          <a href="https://pages.iai.uni-bonn.de/gall_juergen/">Jürgen Gall</a> <br>
+      <papertitle>Unsupervised Learning of Action Classes with Continuous Temporal Embedding</papertitle><br>
+          <span class="authors">Anna Kukleva,
+          Hilde Kuehne,
+          <b>Fadime Sener</b>,
+          Jürgen Gall</span> <br>
         <em>CVPR, 2019</em>
         <p>
-          <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Kukleva_Unsupervised_Learning_of_Action_Classes_With_Continuous_Temporal_Embedding_CVPR_2019_paper.pdf">Paper</a> |
-          <a href="https://github.com/Annusha/unsup_temp_embed">Code</a> <br><br>
+          <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Kukleva_Unsupervised_Learning_of_Action_Classes_With_Continuous_Temporal_Embedding_CVPR_2019_paper.pdf">Paper</a> · <a href="https://github.com/Annusha/unsup_temp_embed">Code</a>
     </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-  <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+  <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
-      <img src="images/furniture.jpg" alt="openegoAR" width="210" height="120" class="center">
+      <img src="images/furniture.jpg" alt="Learning Style Compatibility for Furniture" class="thumb">
       </div>
   </td>
   <td width="75%" valign="middle"><br>
-      <a href="https://arxiv.org/pdf/1812.03570">
-      <papertitle>Learning Style Compatibility for Furniture</papertitle>
-      </a> <br>
-      <a href="https://divyanshaggarwal.github.io/">Divyansh Aggarwal</a>,
-      <a href="https://de.linkedin.com/in/elchin-valiyev-114995b5">Elchin Valiyev</a>,
-      <b>Fadime Sener*</b>,
-      <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+      <papertitle>Learning Style Compatibility for Furniture</papertitle> <br>
+      <span class="authors">Divyansh Aggarwal,
+      Elchin Valiyev,
+      <b>Fadime Sener</b>,
+      Angela Yao</span> <br>
     <em>GCPR, 2019</em>
     <p>
       <a href="https://arxiv.org/pdf/1812.03570">Paper</a>
   </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-  <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+  <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
-      <img src="images/zeroshot.jpg" alt="openegoAR" width="270" height="50" class="center">
+      <img src="images/zeroshot.jpg" alt="Zero-Shot Anticipation for Instructional Activities" class="thumb">
       </div>
   </td>
   <td width="75%" valign="middle"><br>
-      <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Sener_Zero-Shot_Anticipation_for_Instructional_Activities_ICCV_2019_paper.pdf">
-      <papertitle>Zero-Shot Anticipation for Instructional Activities</papertitle>
-      </a> <br>
-      <b>Fadime Sener*</b>,
-      <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
+      <papertitle>Zero-Shot Anticipation for Instructional Activities</papertitle> <br>
+      <span class="authors"><b>Fadime Sener</b>,
+      Angela Yao</span> <br>
     <em>ICCV, 2019</em>
     <p>
       <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Sener_Zero-Shot_Anticipation_for_Instructional_Activities_ICCV_2019_paper.pdf">Paper</a>
   </td>
 </tr>
 
+<tr><td colspan="2" class="year-header">2018</td></tr>
 
-<!-- ITEM -->
-<tr>
-  <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+  <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
-      <img src="images/unsupervised.jpg" alt="openegoAR" width="210" height="120" class="center">
+      <img src="images/unsupervised.jpg" alt="Unsupervised Learning and Segmentation of Complex Activities from Video" class="thumb">
       </div>
   </td>
   <td width="75%" valign="middle"><br>
-      <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Sener_Unsupervised_Learning_and_CVPR_2018_paper.pdf">
-      <papertitle>Unsupervised Learning and Segmentation of Complex Activities from Video</papertitle>
-      </a> <br>
-      <b>Fadime Sener*</b>,
-      <a href="https://www.comp.nus.edu.sg/~ayao/">Angela Yao</a> <br>
-    <em>CVPR, 2018. Spotlight</em>
+      <papertitle>Unsupervised Learning and Segmentation of Complex Activities from Video</papertitle> <br>
+      <span class="authors"><b>Fadime Sener</b>,
+      Angela Yao</span> <br>
+    <em>CVPR, 2018</em><br>
+    <em>Spotlight</em>
     <p>
       <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Sener_Unsupervised_Learning_and_CVPR_2018_paper.pdf">Paper</a>
   </td>
 </tr>
 
+<tr><td colspan="2" class="year-header">2017</td></tr>
 
-<!-- ITEM -->
-<tr>
-  <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+  <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
-      <img src="images/draw.jpg" alt="openegoAR" width="160" height="120" class="center">
+      <img src="images/draw.jpg" alt="DRAW: Deep networks for Recognizing styles of Artists" class="thumb">
       </div>
     </td>
     <td width="75%" valign="middle"><br>
-        <a href="https://arxiv.org/pdf/1704.03057">
-        <papertitle>DRAW: Deep networks for Recognizing styles of Artists Who illustrate children's books</papertitle>
-        </a> <br>
-        <a href="">Samet Hicsonmez</a>,
-        <a href="">Nermin Samet</a>,
-        <b>Fadime Sener*</b>,
-        <a href="https://scholar.google.co.uk/citations?user=1KEMrHkAAAAJ&hl=en/">Pinar Duygulu</a> <br>
+        <papertitle>DRAW: Deep networks for Recognizing styles of Artists Who illustrate children's books</papertitle> <br>
+        <span class="authors">Samet Hicsonmez,
+        Nermin Samet,
+        <b>Fadime Sener</b>,
+        Pinar Duygulu</span> <br>
       <em>ACM ICMR, 2017</em>
       <p>
         <a href="https://arxiv.org/pdf/1704.03057">Paper</a>
     </td>
   </tr>
 
+<tr><td colspan="2" class="year-header">2015</td></tr>
 
-<!-- ITEM -->
-<tr>
-  <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+  <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
-      <img src="images/twopersonint.jpg" alt="openegoAR" width="210" height="120" class="center">
+      <img src="images/twopersonint.jpg" alt="Two-person interaction recognition via spatial multiple instance embedding" class="thumb">
       </div>
   </td>
   <td width="75%" valign="middle"><br>
-      <a href="https://www.sciencedirect.com/science/article/pii/S104732031500142X">
-      <papertitle>Two-person interaction recognition via spatial multiple instance embedding</papertitle>
-      </a> <br>
-      <b>Fadime Sener*</b>,
-      <a href="https://web.cs.hacettepe.edu.tr/~nazli//">Nazli Ikizler-Cinbis</a> <br>
+      <papertitle>Two-person interaction recognition via spatial multiple instance embedding</papertitle> <br>
+      <span class="authors"><b>Fadime Sener</b>,
+      Nazli Ikizler-Cinbis</span> <br>
     <em>JVCIR, 2015</em>
     <p>
       <a href="https://www.sciencedirect.com/science/article/pii/S104732031500142X">Paper</a>
   </td>
 </tr>
 
+<tr><td colspan="2" class="year-header">2014</td></tr>
 
-<!-- ITEM -->
-<tr>
-  <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+  <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
-      <img src="images/ensemble_image.jpg" alt="openegoAR" width="210" height="120" class="center">
+      <img src="images/ensemble_image.jpg" alt="Ensemble of multiple instance classifiers for image re-ranking" class="thumb">
       </div>
   </td>
   <td width="75%" valign="middle"><br>
-      <a href="https://www.sciencedirect.com/science/article/pii/S0262885614000511">
-      <papertitle>Ensemble of multiple instance classifiers for image re-ranking</papertitle>
-      </a> <br>
-      <b>Fadime Sener*</b>,
-      <a href="https://web.cs.hacettepe.edu.tr/~nazli//">Nazli Ikizler-Cinbis</a> <br>
+      <papertitle>Ensemble of multiple instance classifiers for image re-ranking</papertitle> <br>
+      <span class="authors"><b>Fadime Sener</b>,
+      Nazli Ikizler-Cinbis</span> <br>
     <em>IMAVIS, 2014</em>
     <p>
       <a href="https://www.sciencedirect.com/science/article/pii/S0262885614000511">Paper</a>
   </td>
 </tr>
 
+<tr><td colspan="2" class="year-header">2012</td></tr>
 
-<!-- ITEM -->
-<tr>
-  <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+  <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
-      <img src="images/eccvChildren.jpg" alt="openegoAR" width="210" height="120" class="center">
+      <img src="images/eccvChildren.jpg" alt="Identification of illustrators" class="thumb">
       </div>
   </td>
   <td width="75%" valign="middle"><br>
-      <a href="https://link.springer.com/chapter/10.1007/978-3-642-33863-2_61">
-      <papertitle>Identification of illustrators</papertitle>
-      </a> <br>
-      <b>Fadime Sener*</b>,
-      <a href="">Nermin Samet</a>,
-      <a href="https://scholar.google.co.uk/citations?user=1KEMrHkAAAAJ&hl=en/">Pinar Duygulu</a> <br>
+      <papertitle>Identification of illustrators</papertitle> <br>
+      <span class="authors"><b>Fadime Sener</b>,
+      Nermin Samet,
+      Pinar Duygulu</span> <br>
     <em>ECCV'W, 2012</em>
     <p>
       <a href="https://link.springer.com/chapter/10.1007/978-3-642-33863-2_61">Paper</a>
   </td>
 </tr>
 
-
-<!-- ITEM -->
-<tr>
-  <td style="padding:5px;width:40%;vertical-align:middle">
+<tr class="pub-row">
+  <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
-      <img src="images/mileccv.jpg" alt="openegoAR" width="170" height="120" class="center">
+      <img src="images/mileccv.jpg" alt="On recognizing actions in still images via multiple features" class="thumb">
       </div>
   </td>
   <td width="75%" valign="middle"><br>
-      <a href="https://link.springer.com/chapter/10.1007/978-3-642-33885-4_27">
-      <papertitle>On recognizing actions in still images via multiple features</papertitle>
-      </a> <br>
-      <b>Fadime Sener*</b>,
-      <a href="https://web.cs.hacettepe.edu.tr/~nazli//">Nazli Ikizler-Cinbis</a> <br>
-      <em>ECCV'W, 2012</em>
+      <papertitle>On recognizing actions in still images via multiple features</papertitle> <br>
+      <span class="authors"><b>Fadime Sener</b>,
+      Nazli Ikizler-Cinbis</span> <br>
+      <em>ECCV'W, 2012</em><br>
+      <em>Best poster, ENS/INRIA Visual Recognition and Machine Learning Summer School, 2013</em>
     <p>
       <a href="https://link.springer.com/chapter/10.1007/978-3-642-33885-4_27">Paper</a>
   </td>
@@ -856,19 +985,6 @@
 <!--Publication  End ---------------------------------------------->
 
 
-<!--Ref Start ---------------------------------------------->
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-<tbody>
-  <tr>
-  <td style="padding:0px"> <br>
-  <p style="text-align:right;font-size:small;"> <br>
-  Webpage template from <a href="https://jonbarron.info/">Jon Barron</a>. Big thanks!
-  </p>
-  </td>
-  </tr>
-</tbody>
-</table>
-<!--Ref End ---------------------------------------------->
 
 
 </td>
