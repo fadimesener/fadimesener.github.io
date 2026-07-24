@@ -6,17 +6,20 @@
   <meta name="author" content="Fadime Sener">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="icon" type="image/png" href="images/Blue_Jays.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet">
 
 <style type="text/css">
     /* Color scheme stolen from Sergey Karayev */
 
+    :root {
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    }
+
     a {
-      color: #8b2a2a;
+      color: #007C83;
       text-decoration: none;
     }
     b {
@@ -25,51 +28,57 @@
     }
     a:focus,
     a:hover {
-      color: #5a1a1a;
+      color: #005A60;
       text-decoration: underline;
     }
 
+    /* FONT TEST: serif body + sans headings, à la Thinking Machines. */
     body,
     td,
     th,
     tr,
     p {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-family: var(--font-serif);
       font-size: 15px;
-      color: #222;
+      line-height: 1.55;
+      color: #282828;
     }
 
     a {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 15px;
+      font-family: inherit;
+      font-size: inherit;
     }
 
     strong {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-serif);
       font-size: 15px;
       font-weight: 600;
     }
 
-    heading {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 26px;
+    .heading {
+      font-family: var(--font-sans);
+      font-size: 22px;
       font-weight: 600;
       color: #111;
+      margin: 0;
     }
 
-    papertitle {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 17px;
+    .paper-title {
+      font-family: var(--font-sans);
+      font-size: 15px;
       font-weight: 600;
       color: #111;
       line-height: 1.3;
+      display: inline-block;
+      margin-bottom: 4px;
     }
 
-    name {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 36px;
+    .name {
+      font-family: var(--font-sans);
+      font-size: 30px;
       font-weight: 600;
       color: #111;
+      margin: 1em 0;
     }
 
     em {
@@ -78,18 +87,32 @@
     }
 
     .year-header {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 22px;
+      font-family: var(--font-serif);
+      font-size: 15px;
       font-weight: 400;
       font-style: italic;
       color: #111;
-      padding: 28px 0 8px 0;
+      padding: 12px 0 4px;
     }
 
     .pub-row td {
       border-top: 1px solid #f0f0f0;
-      padding-top: 18px;
-      padding-bottom: 18px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .pub-row p {
+      margin: 6px 0 0;
+    }
+
+    .pub-row .authors {
+      display: inline-block;
+      line-height: 1.4;
+      margin-bottom: 2px;
+    }
+
+    .pub-row em {
+      line-height: 1.4;
     }
 
     .pub-row td:first-child {
@@ -102,20 +125,23 @@
 
     .pub-row td a {
       font-weight: 500;
-      text-decoration: underline;
+      text-decoration: none;
       text-decoration-thickness: 1px;
       text-underline-offset: 3px;
     }
 
-    .pub-row td a:hover {
-      text-decoration-thickness: 2px;
+    .pub-row td a:hover,
+    .pub-row td a:focus {
+      text-decoration: underline;
     }
 
     .news-scroll-box {
-      max-height: 380px;
+      max-height: 300px;
       overflow-y: auto;
       padding: 4px 4px 4px 0;
       margin-top: 6px;
+      scrollbar-color: #ddd transparent;
+      scrollbar-width: thin;
     }
     .news-scroll-box ul {
       list-style: none;
@@ -133,9 +159,9 @@
       border-top: none;
     }
     .news-scroll-box .date {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-family: inherit;
       font-style: italic;
-      color: #8b2a2a;
+      color: #007C83;
       font-weight: 500;
       flex: 0 0 56px;
       letter-spacing: 0.02em;
@@ -163,6 +189,55 @@
       display: block;
       margin: 0 auto;
     }
+
+    .profile-photo img {
+      transform: translateY(20px);
+    }
+
+    @media (max-width: 600px) {
+      .profile-row,
+      .profile-copy,
+      .profile-photo {
+        display: block;
+        box-sizing: border-box;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .profile-photo {
+        padding: 0 12px 20px !important;
+      }
+
+      .profile-photo img {
+        width: min(220px, 65%) !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        transform: none;
+      }
+
+      .pub-row {
+        display: block;
+      }
+
+      .pub-row td {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      .pub-row td:first-child {
+        padding: 12px 12px 4px;
+      }
+
+      .pub-row td:last-child {
+        border-top: 0;
+        padding: 4px 12px 14px;
+      }
+
+      .thumb {
+        max-width: 100%;
+      }
+    }
   </style>
 
 
@@ -173,25 +248,23 @@
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Fadime Sener</name>
+          <tr class="profile-row" style="padding:0px">
+            <td class="profile-copy" style="padding:2.5%;width:73%;vertical-align:middle">
+              <h1 class="name" style="text-align:center">Fadime Sener</h1>
+              <p style="text-align:left">
+                I am a Senior Research Scientist at Meta. Previously, I was at the National University of Singapore, and the University of Bonn, where I received my PhD in Computer Science with Angela Yao and Juergen Gall. I hold MSc and BSc degrees in Computer Engineering from Bilkent and Hacettepe University.
               </p>
-              <p style="text-align:justify">
-                I am a Senior AI Research Scientist at Meta Superintelligence Labs. Previously, I was at Meta Reality Labs, the National University of Singapore (NUS), and the University of Bonn, where I received my PhD with Angela Yao and Juergen Gall. I hold MSc and BSc degrees in Computer Engineering from Bilkent and Hacettepe University.
-              </p>
-              <p style="text-align:justify">
-                My research focuses on computer vision and multimodal learning. During my PhD, I worked on unsupervised video understanding through vision and language. At Meta, I worked on online action recognition and streaming video understanding with multimodal LLMs, and on multimedia generation and autoregressive video generation. Recently, I've been exploring streaming video recognition with real-time edge models as tools in agentic pipelines, focused on accurate understanding and timely, proactive response.
+              <p style="text-align:left">
+                My research focuses on multimodal learning and model efficiency. During my PhD, I worked on unsupervised long video understanding through vision and language. At Meta, I worked on online action recognition and streaming video understanding with multimodal LLMs, and on multimedia generation and model distillation.
               </p>
               <p style="text-align:center">
                 <a href="mailto:famesener@gmail.com">Email</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?hl=en&user=-juoweoAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?hl=en&amp;user=-juoweoAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a> &nbsp;/&nbsp;
                 <a href="https://www.linkedin.com/in/fadime-sener-674064156/">LinkedIn</a>
               </p>
             </td>
-            <td style="padding:0.75%;width:35%;max-width:35%">
-              <a href="data/fs.jpg"><img style="width:90%;max-width:90%" alt="profile photo" src="data/fs.jpg" class="hoverZoomLink"></a>
+            <td class="profile-photo" style="padding:0.75%;width:25%;max-width:25%">
+              <a href="data/fs.jpg"><img style="display:block;width:90%;max-width:90%;margin-left:auto;margin-right:0" alt="profile photo" src="data/fs.jpg" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -200,18 +273,18 @@
 
 
 <!--News---------------------------------------------->
-<table class="table" align="right" border="0" cellspacing="0" cellpadding="10">
+<table class="table" border="0" cellspacing="0" cellpadding="10" style="width:100%;margin:0 auto">
 <tr class="row">
 <td class="cell">
-<span id="news"><heading>News</heading></span>
-<div class="news-scroll-box">
+<h2 id="news" class="heading">News</h2>
+<div class="news-scroll-box" tabindex="0" role="region" aria-label="News archive">
 <ul>
 
 
 <!-- ITEM -->
 <li>
   <span class="date">06/26</span>
-  <span class="news-body">Organizing the second
+  <span class="news-body">Organized the second
   <a href="https://varworkshop.github.io/">Vision-based Assistants in the Real-World</a>
   workshop at CVPR 2026.</span>
 </li>
@@ -353,8 +426,8 @@
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 <tbody>
 <tr>
-<td style="padding:20px;width:100%;text-align:center"> <br><br>
-<span id="publications"><heading>Publications</heading></span>
+<td style="padding:28px 10px 10px;width:100%;text-align:left">
+<h2 id="publications" class="heading">Publications</h2>
 </td>
 </tr>
 </tbody>
@@ -363,16 +436,14 @@
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 <tbody>
 
-<tr><td colspan="2" class="year-header">2026</td></tr>
-
 <tr class="pub-row">
     <td style="padding:5px;width:25%;vertical-align:middle">
         <div style="text-align: center">
         <img src="images/decouple_icml.jpg" alt="Decouple and Cache" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Decouple and Cache: KV Cache Construction for Streaming Video Understanding</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Decouple and Cache: KV Cache Construction for Streaming Video Understanding</span> <br>
         <span class="authors">Zhanzhong Pang,
         Dibyadip Chatterjee,
         <b>Fadime Sener</b>,
@@ -389,8 +460,8 @@
         <img src="images/disc_gen_iclr.jpg" alt="On Discriminative vs. Generative Classifiers" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>On Discriminative vs. Generative Classifiers: Rethinking MLLMs for Action Understanding</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">On Discriminative vs. Generative Classifiers: Rethinking MLLMs for Action Understanding</span> <br>
         <span class="authors">Zhanzhong Pang,
         Dibyadip Chatterjee,
         <b>Fadime Sener</b>,
@@ -407,8 +478,8 @@
         <img src="images/dont_pause.jpg" alt="Don't Pause! Every prediction matters in a streaming video" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Don't Pause! Every prediction matters in a streaming video</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Don't Pause! Every prediction matters in a streaming video</span> <br>
         <span class="authors">Dibyadip Chatterjee,
         Zhanzhong Pang,
         <b>Fadime Sener</b>,
@@ -426,9 +497,17 @@
         <img src="images/osmo_cvpr.jpg" alt="OSMO" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>OSMO: Open-vocabulary Self-eMOtion Tracking</papertitle>
+    <td width="75%" valign="middle">
+        <span class="paper-title">OSMO: Open-vocabulary Self-eMOtion Tracking</span>
         <br>
+        <span class="authors">Mohamed Abdelfattah,
+        Bugra Tekin,
+        <b>Fadime Sener</b>,
+        Necati Cihan Camgoz,
+        Eric Sauser,
+        Shugao Ma,
+        Alexandre Alahi,
+        Edoardo Remelli</span> <br>
       <em>CVPR, 2026</em>
     </td>
 </tr>
@@ -439,10 +518,20 @@
         <img src="images/trust_clip.jpg" alt="TrustCLIP" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>TrustCLIP: Learning Private Visual Features via Adversarial Reconstruction</papertitle>
+    <td width="75%" valign="middle">
+        <span class="paper-title">TrustCLIP: Learning Private Visual Features via Adversarial Reconstruction</span>
         <br>
-      <em>Under review, ECCV 2026</em>
+        <span class="authors">Nikos Athanasiou,
+        Ilya A. Petrov,
+        Angela Yao,
+        Shugao Ma,
+        Eric Sauser,
+        Edoardo Remelli,
+        Shreyas Hampali,
+        Johannes Sch&ouml;nberger,
+        <b>Fadime Sener</b>,
+        and Bugra Tekin</span> <br>
+      <em>ECCV, 2026</em>
     </td>
 </tr>
 
@@ -452,8 +541,8 @@
         <img src="images/sneakpeak.jpg" alt="SneakPeek" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>SneakPeek: Future-Guided Instructional Streaming Video Generation</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">SneakPeek: Future-Guided Instructional Streaming Video Generation</span> <br>
         <span class="authors">Cheeun Hong,
         German Barquero,
         <b>Fadime Sener</b>,
@@ -463,7 +552,7 @@
         Yuming Du,
         Oscar Mañas,
         Albert Pumarola</span> <br>
-      <em>Under review, ECCV 2026</em>
+      <em>Under review</em>
       <p>
         <a href="https://arxiv.org/pdf/2512.13019">Paper</a>
     </td>
@@ -475,8 +564,8 @@
         <img src="images/palm_3dv.jpg" alt="PALM" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>PALM: A Dataset and Baseline for Learning Multi-subject Hand Prior</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">PALM: A Dataset and Baseline for Learning Multi-subject Hand Prior</span> <br>
         <span class="authors">Zicong Fan,
         Edoardo Remelli,
         David Dimond,
@@ -499,8 +588,8 @@
         <img src="images/ProVideoLLM.jpg" alt="Memory-efficient Streaming VideoLLMs for Real-time Procedural Video Understanding" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Memory-efficient Streaming VideoLLMs for Real-time Procedural Video Understanding</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Memory-efficient Streaming VideoLLMs for Real-time Procedural Video Understanding</span> <br>
         <span class="authors">Dibyadip Chatterjee,
         Edoardo Remelli,
         Yale Song,
@@ -526,8 +615,8 @@
         <img src="images/CMeRT.jpg" alt="Context-Enhanced Memory-Refined Transformer for Online Action Detection" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Context-Enhanced Memory-Refined Transformer for Online Action Detection</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Context-Enhanced Memory-Refined Transformer for Online Action Detection</span> <br>
         <span class="authors">Zhanzhong Pang,
         <b>Fadime Sener</b>,
         Angela Yao</span> <br>
@@ -543,8 +632,8 @@
         <img src="images/mistake.jpg" alt="Spatial and temporal beliefs for mistake detection in assembly tasks" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Spatial and temporal beliefs for mistake detection in assembly tasks</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Spatial and temporal beliefs for mistake detection in assembly tasks</span> <br>
         <span class="authors">Guodong Ding,
         <b>Fadime Sener</b>,
         Shugao Ma,
@@ -563,8 +652,8 @@
         <img src="images/tailTAS.jpg" alt="Long-Tail Temporal Action Segmentation with Group-wise Temporal Logit Adjustment" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Long-Tail Temporal Action Segmentation with Group-wise Temporal Logit Adjustment</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Long-Tail Temporal Action Segmentation with Group-wise Temporal Logit Adjustment</span> <br>
         <span class="authors">Zhanzhong Pang,
         <b>Fadime Sener</b>,
         Shrinivas Ramasubramanian,
@@ -581,8 +670,8 @@
         <img src="images/cost_sensitive.jpg" alt="Cost-Sensitive Learning for Long-Tailed Temporal Action Segmentation" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Cost-Sensitive Learning for Long-Tailed Temporal Action Segmentation</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Cost-Sensitive Learning for Long-Tailed Temporal Action Segmentation</span> <br>
         <span class="authors">Zhanzhong Pang,
         <b>Fadime Sener</b>,
         Shrinivas Ramasubramanian,
@@ -599,8 +688,8 @@
         <img src="images/handformer.png" alt="On the Utility of 3D Hand Poses for Action Recognition" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>On the Utility of 3D Hand Poses for Action Recognition</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">On the Utility of 3D Hand Poses for Action Recognition</span> <br>
         <span class="authors">Md Salman Shamil,
         Dibyadip Chatterjee,
         <b>Fadime Sener</b>,
@@ -618,8 +707,8 @@
         <img src="images/diffh2o.jpg" alt="DiffH2O" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>DiffH2O: Diffusion-Based Synthesis of Hand-Object Interactions from Textual Descriptions</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">DiffH2O: Diffusion-Based Synthesis of Hand-Object Interactions from Textual Descriptions</span> <br>
         <span class="authors">Sammy Christen,
         Shreyas Hampali,
         <b>Fadime Sener</b>,
@@ -640,8 +729,8 @@
       <img src="images/xmic.png" alt="X-MIC" class="thumb">
       </div>
   </td>
-  <td width="75%" valign="middle"><br>
-      <papertitle>X-MIC: Cross-Modal Instance Conditioning for Egocentric Action Generalization</papertitle> <br>
+  <td width="75%" valign="middle">
+      <span class="paper-title">X-MIC: Cross-Modal Instance Conditioning for Egocentric Action Generalization</span> <br>
       <span class="authors">Anna Kukleva,
       <b>Fadime Sener</b>,
       Edoardo Remelli,
@@ -663,8 +752,8 @@
         <img src="images/openegoAR.png" alt="Opening the Vocabulary of Egocentric Actions" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Opening the Vocabulary of Egocentric Actions</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Opening the Vocabulary of Egocentric Actions</span> <br>
         <span class="authors">Dibyadip Chatterjee,
         <b>Fadime Sener</b>,
         Shugao Ma,
@@ -681,8 +770,8 @@
         <img src="images/taskTAS.png" alt="Temporal Action Segmentation" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Temporal Action Segmentation: An Analysis of Modern Techniques</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Temporal Action Segmentation: An Analysis of Modern Techniques</span> <br>
         <span class="authors">Guodong Ding,
         <b>Fadime Sener</b>,
         Angela Yao</span> <br>
@@ -698,8 +787,8 @@
         <img src="images/assemblyhands.png" alt="AssemblyHands" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>AssemblyHands: Towards Egocentric Activity Understanding via 3D Hand Pose Estimation</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">AssemblyHands: Towards Egocentric Activity Understanding via 3D Hand Pose Estimation</span> <br>
         <span class="authors">Takehiko Ohkawa,
         Kun He,
         <b>Fadime Sener</b>,
@@ -721,8 +810,8 @@
         <img src="images/zeroshotTpami.jpg" alt="Transferring Knowledge from Text to Video" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Transferring Knowledge from Text to Video: Zero-Shot Anticipation for Procedural Actions</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Transferring Knowledge from Text to Video: Zero-Shot Anticipation for Procedural Actions</span> <br>
         <span class="authors"><b>Fadime Sener</b>,
         Rishabh Saraf,
         Angela Yao</span> <br>
@@ -738,8 +827,8 @@
         <img src="images/troi.jpg" alt="Transformed ROIs for Capturing Visual Transformations in Videos" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Transformed ROIs for Capturing Visual Transformations in Videos</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Transformed ROIs for Capturing Visual Transformations in Videos</span> <br>
         <span class="authors">Abhinav Rai,
         <b>Fadime Sener</b>,
         Angela Yao</span> <br>
@@ -755,8 +844,8 @@
         <img src="images/assembly.png" alt="Assembly101" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Assembly101: A Large-Scale Multi-View Video Dataset for Understanding Procedural Activities</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Assembly101: A Large-Scale Multi-View Video Dataset for Understanding Procedural Activities</span> <br>
         <span class="authors"><b>Fadime Sener</b>,
         Dibyadip Chatterjee,
         Daniel Shelepov,
@@ -779,8 +868,8 @@
         <img src="images/tempagg_tech.jpg" alt="Temporal aggregate representations technical report" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Technical report: Temporal aggregate representations</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Technical report: Temporal aggregate representations</span> <br>
         <span class="authors"><b>Fadime Sener</b>,
         Dibyadip Chatterjee,
         Angela Yao</span> <br>
@@ -798,8 +887,8 @@
         <img src="images/tempagg.jpg" alt="Temporal aggregate representations for long-range video understanding" class="thumb">
         </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>Temporal aggregate representations for long-range video understanding</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">Temporal aggregate representations for long-range video understanding</span> <br>
         <span class="authors"><b>Fadime Sener</b>,
         Dipika Singhania,
         Angela Yao</span> <br>
@@ -818,8 +907,8 @@
       <img src="images/cvpr19.png" alt="Unsupervised Learning of Action Classes with Continuous Temporal Embedding" class="thumb">
       </div>
     </td>
-    <td width="75%" valign="middle"><br>
-      <papertitle>Unsupervised Learning of Action Classes with Continuous Temporal Embedding</papertitle><br>
+    <td width="75%" valign="middle">
+      <span class="paper-title">Unsupervised Learning of Action Classes with Continuous Temporal Embedding</span><br>
           <span class="authors">Anna Kukleva,
           Hilde Kuehne,
           <b>Fadime Sener</b>,
@@ -836,8 +925,8 @@
       <img src="images/furniture.jpg" alt="Learning Style Compatibility for Furniture" class="thumb">
       </div>
   </td>
-  <td width="75%" valign="middle"><br>
-      <papertitle>Learning Style Compatibility for Furniture</papertitle> <br>
+  <td width="75%" valign="middle">
+      <span class="paper-title">Learning Style Compatibility for Furniture</span> <br>
       <span class="authors">Divyansh Aggarwal,
       Elchin Valiyev,
       <b>Fadime Sener</b>,
@@ -854,8 +943,8 @@
       <img src="images/zeroshot.jpg" alt="Zero-Shot Anticipation for Instructional Activities" class="thumb">
       </div>
   </td>
-  <td width="75%" valign="middle"><br>
-      <papertitle>Zero-Shot Anticipation for Instructional Activities</papertitle> <br>
+  <td width="75%" valign="middle">
+      <span class="paper-title">Zero-Shot Anticipation for Instructional Activities</span> <br>
       <span class="authors"><b>Fadime Sener</b>,
       Angela Yao</span> <br>
     <em>ICCV, 2019</em>
@@ -872,8 +961,8 @@
       <img src="images/unsupervised.jpg" alt="Unsupervised Learning and Segmentation of Complex Activities from Video" class="thumb">
       </div>
   </td>
-  <td width="75%" valign="middle"><br>
-      <papertitle>Unsupervised Learning and Segmentation of Complex Activities from Video</papertitle> <br>
+  <td width="75%" valign="middle">
+      <span class="paper-title">Unsupervised Learning and Segmentation of Complex Activities from Video</span> <br>
       <span class="authors"><b>Fadime Sener</b>,
       Angela Yao</span> <br>
     <em>CVPR, 2018</em><br>
@@ -891,8 +980,8 @@
       <img src="images/draw.jpg" alt="DRAW: Deep networks for Recognizing styles of Artists" class="thumb">
       </div>
     </td>
-    <td width="75%" valign="middle"><br>
-        <papertitle>DRAW: Deep networks for Recognizing styles of Artists Who illustrate children's books</papertitle> <br>
+    <td width="75%" valign="middle">
+        <span class="paper-title">DRAW: Deep networks for Recognizing styles of Artists Who illustrate children's books</span> <br>
         <span class="authors">Samet Hicsonmez,
         Nermin Samet,
         <b>Fadime Sener</b>,
@@ -903,7 +992,7 @@
     </td>
   </tr>
 
-<tr><td colspan="2" class="year-header">2015</td></tr>
+<tr><td colspan="2" class="year-header">Before 2017</td></tr>
 
 <tr class="pub-row">
   <td style="padding:5px;width:25%;vertical-align:middle">
@@ -911,8 +1000,8 @@
       <img src="images/twopersonint.jpg" alt="Two-person interaction recognition via spatial multiple instance embedding" class="thumb">
       </div>
   </td>
-  <td width="75%" valign="middle"><br>
-      <papertitle>Two-person interaction recognition via spatial multiple instance embedding</papertitle> <br>
+  <td width="75%" valign="middle">
+      <span class="paper-title">Two-person interaction recognition via spatial multiple instance embedding</span> <br>
       <span class="authors"><b>Fadime Sener</b>,
       Nazli Ikizler-Cinbis</span> <br>
     <em>JVCIR, 2015</em>
@@ -921,16 +1010,14 @@
   </td>
 </tr>
 
-<tr><td colspan="2" class="year-header">2014</td></tr>
-
 <tr class="pub-row">
   <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
       <img src="images/ensemble_image.jpg" alt="Ensemble of multiple instance classifiers for image re-ranking" class="thumb">
       </div>
   </td>
-  <td width="75%" valign="middle"><br>
-      <papertitle>Ensemble of multiple instance classifiers for image re-ranking</papertitle> <br>
+  <td width="75%" valign="middle">
+      <span class="paper-title">Ensemble of multiple instance classifiers for image re-ranking</span> <br>
       <span class="authors"><b>Fadime Sener</b>,
       Nazli Ikizler-Cinbis</span> <br>
     <em>IMAVIS, 2014</em>
@@ -939,16 +1026,14 @@
   </td>
 </tr>
 
-<tr><td colspan="2" class="year-header">2012</td></tr>
-
 <tr class="pub-row">
   <td style="padding:5px;width:25%;vertical-align:middle">
       <div style="text-align: center">
       <img src="images/eccvChildren.jpg" alt="Identification of illustrators" class="thumb">
       </div>
   </td>
-  <td width="75%" valign="middle"><br>
-      <papertitle>Identification of illustrators</papertitle> <br>
+  <td width="75%" valign="middle">
+      <span class="paper-title">Identification of illustrators</span> <br>
       <span class="authors"><b>Fadime Sener</b>,
       Nermin Samet,
       Pinar Duygulu</span> <br>
@@ -964,8 +1049,8 @@
       <img src="images/mileccv.jpg" alt="On recognizing actions in still images via multiple features" class="thumb">
       </div>
   </td>
-  <td width="75%" valign="middle"><br>
-      <papertitle>On recognizing actions in still images via multiple features</papertitle> <br>
+  <td width="75%" valign="middle">
+      <span class="paper-title">On recognizing actions in still images via multiple features</span> <br>
       <span class="authors"><b>Fadime Sener</b>,
       Nazli Ikizler-Cinbis</span> <br>
       <em>ECCV'W, 2012</em><br>
